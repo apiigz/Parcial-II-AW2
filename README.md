@@ -1,18 +1,21 @@
-# PARCIAL I - Aplicaciones Web II - Gastón Paz
+# PARCIAL II - Aplicaciones Web II - Gastón Paz
 
-Para la realización del parcial decidí usar, cómo contexto o temática, una librería. Donde se almacenan libros para la venta.
+Durante la segunda parte del parcial se migraron todos los datos de los libros a una DB (admin), dónde desde ahí no solo se manejarán éstos, si no que también los usuarios
 
-La aplicación consta de tres endpoints, dos para consulta, y una por fuera de la API REST.
+La aplicación sigue constando de tres endpoints, dos para consulta, y una por fuera de la API REST.
 
-# Primer endpoint
+Pero lo más novedoso son los nuevos tres endpoints:
 
-Devuelve, en un .JSON, todos los libros de la base de datos (libros.mjs, qué, a su vez, simula ser una base de datos).
+# Primer nuevo endpoint ('/registrar')
 
-# Segundo endpoint
+Permite al usuario registrarse para poder acceder al cátalogo de libros y a las demas funcionalidades.
 
-Devuelve un único objeto (libro), qué será del id que el usuario ingrese.
+# Segundo nuevo endpoint ('/ingresar')
 
-# Tercer endpoint
+Permite que el usuario pueda ingresar al cátalogo, en base a su cuenta. Una vez ingresado se le asignan cookies para no tener que pasar por el proceso de login una y otra vez, si no que yendo al endpoint directamente.
 
-Devuelve el valor total del inventario, qué se saca del cálculo "(libro.precio * libro.stock)", qué, traducido, es el precio del libro
-por la cantidad disponible (stock)
+# Tercer nuevo endpoint ('/logout')
+
+Esté último sirve para qué el usuario pueda cerrar su sesión y sus cookies, así nadie puede acceder a su cuenta.
+
+Además, la aplicación cuenta con un manejo de cookies, y un estricto regimen de seguridad para los datos del usuario, usando librerias como bcryptjs y nanoid.
