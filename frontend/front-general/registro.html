@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Central - Autenticación</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <main class="login-container">
+        <header class="library-header">
+            <h1>Biblioteca Central</h1>
+            <p class="subtitle">Registro de Lectores</p>
+            <div class="ornament">❖ ⚜ ❖</div>
+        </header>
+        <form id="login-form" class="auth-form" action="/registrar" method="POST">
+            <div class="input-group">
+                <label for="login-user">Usuario</label>
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+            <div class="input-group">
+                <label for="login-pass">Contraseña</label>
+                <input type="password" id="pass" name="pass" required>
+            </div>
+            <button type="submit" class="btn-vintage">Registrarse</button>
+            <p class="toggle-text">Ya tenes una cuenta? <a href="index.html" id="registrar">Iniciar sesión</a></p>
+        </form>
+        <footer class="library-footer">
+            <p>Fundada en 1913</p>
+        </footer>
+    </main>
+</body>
+</html>
